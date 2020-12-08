@@ -52,7 +52,7 @@ export default class Tokenizer {
     }
 
     createWordRegex(specialChars = []) {
-        return new RegExp(`^([\\w${specialChars.join("")}]+)`);
+        return new RegExp(`^([\\w\\u4e00-\\u9fa5${specialChars.join("")}]+)`);
     }
 
     createStringRegex(stringTypes) {
